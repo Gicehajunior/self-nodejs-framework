@@ -14,7 +14,7 @@ To get the app running, just follow the following procedure
     
     1)Clone this project using: git clone https://github.com/Gicehajunior/Node-Js-Framework
     2)Create a sql query table, users, with columns: id, username, email, contacts, password.
-    3)Create a .env file on the root folder, src, and copy all the details from .env-example file. Edit the parameters viable for database connection.
+    3)Create a .env file on the root folder, and copy all the details from .env-example file. Edit the parameters viable for database connection.
     4)run "npm install to install all the packages from the package.json file.
     5)To run, just do "npm serve".
 
