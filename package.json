@@ -1,7 +1,7 @@
 {
   "name": "passport-login-system",
   "version": "1.0.0",
-  "description": "vehicle parking Node Web Application/System",
+  "description": "Node Web Application Framework",
   "main": "index.js",
   "scripts": {
     "serve": "nodemon --exec babel-node src/server.js"
