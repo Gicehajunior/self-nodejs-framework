@@ -13,8 +13,15 @@ let initWebRoutes = (app) => {
     router.get('/', (req, res) => {
         return res.render('home.ejs')
     })
+
+    // register user page routes
     router.get('/register', registerController.getRegisterPage)
+    router.post('/register-new-user', registerController.createNewUser)
+
+    // login user page routes
     router.get('/login', loginController.getLoginPage)
+
+    // home page routes
     return app.use('/', router)
 }
 
