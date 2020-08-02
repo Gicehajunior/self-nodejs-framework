@@ -1,5 +1,5 @@
 ## Project
-A well designed Web Template in NodeJs, Bootstrap and Mysql on server side
+A well designed Web Framework in NodeJs, Bootstrap and Mysql on server side
 
 ## Get Started.
 git clone https://github.com/Gicehajunior/Node-Js-Framework
