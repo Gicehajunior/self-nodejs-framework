@@ -10,39 +10,39 @@
  */
 function handleRegistrationErrors(userUid, emailUid, password, confirmPassword) {
     
-    const email_regular_expression = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    const email_regular_expression = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     if (userUid.length > 0) {
-        $('#userUid').removeClass('is-invalid')
+        $('#userUid').removeClass('is-invalid');
     } else {
-        $('#userUid').addClass('is-invalid')
+        $('#userUid').addClass('is-invalid');
     }
 
     if (emailUid.match(email_regular_expression)){
         $('#emailUid').removeClass('is-invalid')
     }
     else{
-        $('#emailUid').addClass('is-invalid')
+        $('#emailUid').addClass('is-invalid');
     }
 
     if(password.length > 0){
-        $('#password').removeClass('is-invalid')
+        $('#password').removeClass('is-invalid');
     }
     else{
-        $('#password').addClass('is-invalid')
+        $('#password').addClass('is-invalid');
     }
 
     if (confirmPassword === password) {
-        $('#password-confirmation').removeClass('is-invalid')
+        $('#password-confirmation').removeClass('is-invalid');
     }
     else{
-        $('#password-confirmation').addClass('is-invalid')
+        $('#password-confirmation').addClass('is-invalid');
     }
     
     if (userUid.length <= 0 || !emailUid.match(email_regular_expression) || password.length <= 0 || password !== confirmPassword)
         // has errors
-        return true
-    return false
+        return true;
+    return false;
 }
 
 
@@ -54,15 +54,15 @@ function handleRegistrationErrors(userUid, emailUid, password, confirmPassword) 
  */
 $(document).ready(function(){
     $('#registerBtn').on('click', (e) => {
-        e.preventDefault()
+        e.preventDefault();
 
-        let userUid = $('#userUid').val()
-        let emailUid = $('#emailUid').val()
-        let password = $('#password').val()
+        let userUid = $('#userUid').val();
+        let emailUid = $('#emailUid').val();
+        let password = $('#password').val();
         let confirmPassword = $("#password-confirmation").val();
         
         // handles errors
-        let checkErrors = handleRegistrationErrors(userUid, emailUid, password, confirmPassword)
+        let checkErrors = handleRegistrationErrors(userUid, emailUid, password, confirmPassword);
 
         if(!checkErrors){
             $.ajax({
@@ -75,15 +75,15 @@ $(document).ready(function(){
                     confirmPassword: confirmPassword
                 },
                 success: (data) => {
-                    console.log(data)
+                    console.log(data);
                 },
                 error: (errors) => {
-                    console.log(errors)
+                    console.log(errors);
                 }
-            })
+            });
         }
         else{
-            return
+            return;
         }
     })
 })
