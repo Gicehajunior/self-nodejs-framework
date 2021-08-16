@@ -22,7 +22,7 @@ initWebRoutes(app)
  * config our app to run on a port 
  * The port is set in the .env folder
  * *********/
-let port = process.env.PORT
+let port = (process.env.PORT) ? process.env.PORT : 5000;
 
 app.listen(port, (req, res) => {
     console.log(`The application is running on port ${port}`)
